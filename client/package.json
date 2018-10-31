@@ -3,13 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "history": "^4.7.2",
+    "lodash": "^4.17.11",
     "react": "^16.5.2",
+    "react-apollo": "^2.2.4",
     "react-dom": "^16.5.2",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.4.0-beta.5",
+    "react-router-redux": "^5.0.0-alpha.9",
     "react-scripts": "2.0.5",
     "recompose": "^0.30.0",
+    "reduce-reducers": "^0.4.3",
     "redux": "^4.0.1",
+    "redux-actions": "^2.6.1",
+    "redux-form": "^7.4.2",
     "redux-saga": "^0.16.2",
-    "reselect": "^4.0.0"
+    "reselect": "^4.0.0",
+    "styled-components": "^4.0.3",
+    "styled-normalize": "^8.0.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +41,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-preset-flow": "^6.23.0",
+    "enzyme": "^3.7.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-ottofeller": "^0.1.9",
     "flow": "^0.2.3",

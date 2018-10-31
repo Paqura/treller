@@ -14,7 +14,7 @@ const
 		user: null,
 	};
 
-export const reducer = (state = initialState, action: ActionT): TUser => {
+export const reducer = (state: TUser = initialState, action: ActionT): TUser => {
 	switch(action.type) {
 	default: return state;
 	}
