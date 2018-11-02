@@ -1,34 +1,36 @@
+// @flow
+
 import {compose, withHandlers, withState} from 'recompose';
 import {DashBoardName} from '../style';
 import EditTitlePopup from './EditTitlePopup';
+import {PortalWithState} from 'react-portal';
 import React from 'react';
 
 const
 	EditTitle = (props: {
 		edit: () => {},
 		titleName: string,
-		toggleEditMode: () => boolean,
-		isEdit: boolean,
 	}) => (
 		<React.Fragment>
-			<DashBoardName
-				onClick={props.toggleEditMode}
-			>
-				{props.titleName}
-			</DashBoardName>
-
-			{props.isEdit && <EditTitlePopup edit={props.edit} />}
-
+			<PortalWithState closeOnOutsideClick closeOnEsc>
+				{({openPortal, portal}) => (
+					<React.Fragment>
+						<DashBoardName onClick={openPortal} >
+							{props.titleName}
+						</DashBoardName>
+						{portal(
+							<EditTitlePopup edit={props.edit} />,
+						)}
+					</React.Fragment>
+				)}
+			</PortalWithState>
 		</React.Fragment>
 	);
 
 export default compose(
-	withState('isEdit', 'toggleEditTitle', false),
 	withState('titleName', 'changeTitle', 'Empty title'),
 
 	withHandlers({
-		edit          : props => event => props.changeTitle(event.target.value),
-		toggleEditMode: props => () => props.toggleEditTitle(V => !V),
+		edit: props => event => props.changeTitle(event.target.value),
 	}),
-)
-(EditTitle);
+)(EditTitle);

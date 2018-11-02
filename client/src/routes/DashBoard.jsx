@@ -1,3 +1,5 @@
+// @flow
+
 import DashBoard from '../components/DashBoard';
 import React from 'react';
 
