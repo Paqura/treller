@@ -14,7 +14,7 @@ const
 					<label>
 						<input 
 							type="text" 
-							onChange={props.edit} 
+							onChange={props.edit}
 						/>
 					</label>
 				</p>

@@ -1,3 +1,5 @@
+// @flow
+
 import {Route, Switch} from 'react-router-dom';
 import AboutPage from './About';
 import DashBoard from './DashBoard';
