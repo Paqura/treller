@@ -19,7 +19,8 @@ export const
 		position: absolute;
 		left: 60px;
 		top: 50px;
-		box-shadow: 2px 2px 4px #ccc;
+		box-shadow: 2px 2px 4px #cccccc;
 		max-width: 240px;
 		padding: 32px;
+		background-color: #ffffff;
 	`;
