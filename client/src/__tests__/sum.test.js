@@ -1,7 +1,7 @@
+// eslint-disable-next-line
 const
 	sum = (a, b) => a + b;
 
 it('test sum', () => {
-	const res = sum(2, 2);
-	expect(res).toEqual(4);
+	expect(sum(2, 2)).toEqual(4);
 });

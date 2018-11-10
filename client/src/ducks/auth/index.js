@@ -16,6 +16,10 @@ const
 
 export const reducer = (state: TUser = initialState, action: ActionT): TUser => {
 	switch(action.type) {
+	case
+		'AUTH':
+		return state;
+
 	default: return state;
 	}
 };
