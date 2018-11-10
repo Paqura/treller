@@ -1,15 +1,9 @@
 language: node_js
 node_js:
-  - '9'
-
-install:
-  - travis_retry yarn install 
-
-jobs:
-  include:
-    - stage: test
-      name: "Flow/Lint/Test"
-      script:
-        - yarn lint
-        - yarn flow
-        - yarn test
+  - "stable"
+cache:
+  directories:
+  - node_modules
+script:
+  - npm test
+  - npm run build
