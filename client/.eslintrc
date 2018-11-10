@@ -96,7 +96,6 @@
 		"no-shadow"                                 : [2],
 		"no-unused-vars"                            : [2],
 		"object-curly-spacing"                      : [1, "never"],
-		"ottofeller/no-var-on-same-line"            : [2],
 		"ottofeller/no-full-name-lambda-params"     : [2],
 		"ottofeller/newline-around-multiline-blocks": [1],
 		"padded-blocks"                             : [2, "never"],
