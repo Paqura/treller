@@ -1,9 +1,15 @@
-sudo: false
-
 language: node_js
 node_js:
-  - 9
+  - '9'
 
-branches:
-  only:
-    - master
+install:
+  - travis_retry yarn install 
+
+jobs:
+  include:
+    - stage: test
+      name: "Flow/Lint/Test"
+      script:
+        - yarn lint
+        - yarn flow
+        - yarn test
